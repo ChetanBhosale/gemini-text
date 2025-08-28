@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Gemini Grammar Corrector",
+  "version": "1.0",
+  "description": "A Grammarly-like extension using Gemini API to correct text in inputs.",
+  "permissions": ["storage", "commands"],
+  "host_permissions": ["https://generativelanguage.googleapis.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "commands": {
+    "open-modal": {
+      "suggested_key": {
+        "default": "Ctrl+K",
+        "mac": "Command+K"
+      },
+      "description": "Open correction modal for focused input"
+    },
+    "auto-correct": {
+      "suggested_key": {
+        "default": "Ctrl+M",
+        "mac": "Command+M"
+      },
+      "description": "Auto-correct text in focused input"
+    }
+  }
+}

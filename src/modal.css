@@ -1,0 +1,316 @@
+/* ClearView Modal Styles - Simple & Classic */
+.clearview-modal {
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.clearview-modal-content {
+    background-color: #ffffff;
+    padding: 0;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.clearview-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid #e5e7eb;
+    background: #f8f9fa;
+    border-radius: 8px 8px 0 0;
+    color: #333;
+}
+
+.clearview-modal-header h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.keys-dropdown {
+    position: relative;
+}
+
+.keys-dropdown-btn {
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    color: #666;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+.keys-dropdown-btn:hover {
+    background: #f3f4f6;
+    border-color: #9ca3af;
+}
+
+.keys-dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: white;
+    min-width: 300px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    z-index: 1001;
+    padding: 15px;
+    margin-top: 5px;
+    color: #333;
+}
+
+.keys-dropdown-content.show {
+    display: block;
+}
+
+.key-input-group {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.key-input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 14px;
+    background: white;
+    color: #333;
+}
+
+.key-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.save-btn {
+    padding: 8px 16px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.save-btn:hover {
+    background-color: #2563eb;
+}
+
+.key-status {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.key-status.saved {
+    color: #059669;
+}
+
+.clearview-close-btn {
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    color: #666;
+    font-size: 18px;
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.clearview-close-btn:hover {
+    background: #f3f4f6;
+    border-color: #9ca3af;
+}
+
+.clearview-modal-body {
+    padding: 20px;
+}
+
+.textarea-section {
+    margin-bottom: 20px;
+}
+
+.textarea-section label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+    font-size: 14px;
+}
+
+.text-input-container {
+    position: relative;
+}
+
+.text-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.5;
+    resize: vertical;
+    font-family: inherit;
+    box-sizing: border-box;
+    background: white;
+    color: #333;
+}
+
+.text-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.text-capture-info {
+    margin-top: 6px;
+    padding: 4px 8px;
+    background-color: #f0f9ff;
+    color: #0369a1;
+    border-radius: 4px;
+    font-size: 12px;
+    border: 1px solid #bae6fd;
+}
+
+.action-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.go-btn {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    min-width: 120px;
+}
+
+.go-btn:hover:not(:disabled) {
+    background: #2563eb;
+}
+
+.go-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.result-section {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 20px;
+    margin-top: 10px;
+}
+
+.result-section label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+    font-size: 14px;
+}
+
+.result-container {
+    position: relative;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    background-color: #f9fafb;
+}
+
+.result-text {
+    padding: 16px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+    min-height: 60px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 6px 12px;
+    background-color: #6b7280;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.copy-btn:hover {
+    background-color: #4b5563;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .clearview-modal-content {
+        width: 95%;
+        max-width: none;
+        margin: 20px;
+        max-height: 95vh;
+    }
+    
+    .clearview-modal-body {
+        padding: 16px;
+    }
+    
+    .key-input-group {
+        flex-direction: column;
+    }
+    
+    .save-btn {
+        width: 100%;
+    }
+    
+    .keys-dropdown-content {
+        right: -100px;
+        min-width: 250px;
+    }
+    
+    .go-btn {
+        width: 100%;
+        padding: 14px 24px;
+    }
+}
